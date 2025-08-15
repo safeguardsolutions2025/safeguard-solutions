@@ -1,0 +1,20 @@
+:root {
+  --brand: #1D6D7E;      /* azul petróleo */
+  --brand-2: #8BD3A6;    /* verde menta hover */
+  --accent: #0F172A;     /* texto oscuro */
+  --bgFrom: #F5F5F5;
+  --bgTo: #FFFFFF;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+a{color:var(--brand);text-decoration:none}
+a:hover{color:var(--brand-2)}
+.container{max-width:1120px;margin:0 auto;padding:0 16px}
+.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:16px;padding:12px 16px;border:1px solid transparent;cursor:pointer;transition:.2s}
+.btn-brand{background:var(--brand);color:#fff;border-color:var(--brand)}
+.btn-brand:hover{background:var(--brand-2);border-color:var(--brand-2)}
+.link{font-weight:600}
+.chip{border:1px solid #e2e8f0;background:#fff;border-radius:9999px;padding:6px 12px;font-size:12px}
+.card{border:1px solid #e2e8f0;border-radius:20px;background:#fff}
+header.sticky{position:sticky;top:0;z-index:40;backdrop-filter:blur(6px);background:rgba(255,255,255,.75);border-bottom:1px solid #e2e8f0}
+h1,h2{margin:0}
