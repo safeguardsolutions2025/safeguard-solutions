@@ -12,6 +12,10 @@
     "type": "image"
   },
   {
+    "src": "/imagenes/1 CB.jpg",
+    "type": "image"
+  },
+  {
     "src": "/imagenes/1 D.jpg",
     "type": "image"
   },
@@ -56,24 +60,16 @@
     "type": "image"
   },
   {
-    "src": "/imagenes/4.A-pressurized-water-pipe-509871.jpg",
-    "type": "image"
-  },
-  {
     "src": "/imagenes/4.-gasoline-175122_1920.jpg",
-    "type": "image"
-  },
-  {
-    "src": "/imagenes/I K.jpg",
-    "type": "image"
-  },
-  {
-    "src": "/imagenes/pexels-tima-miroshnichenko-5846583.jpg",
     "type": "image"
   },
   {
     "src": "/imagenes/X.jpg",
     "type": "image"
+  },
+  {
+    "src": "/imagenes/Y.mp4",
+    "type": "video"
   },
   {
     "src": "/imagenes/z.jpg",
