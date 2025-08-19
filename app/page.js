@@ -14,7 +14,7 @@ async function loadMediaList(){try{const r=await fetch("/imagenes/media.json",{c
 function probeAsset(it){return new Promise(res=>{if(it.type==="image"){const im=new Image();im.onload=()=>res(true);im.onerror=()=>res(false);im.src=it.src;}else{const v=document.createElement("video");v.onloadedmetadata=()=>res(true);v.onerror=()=>res(false);v.src=it.src;v.muted=true;v.playsInline=true;}});}
 function Modal({open,onClose,children}){if(!open)return null;return(<div role="dialog" aria-modal="true" onClick={onClose} style={{position:"fixed",inset:0,background:"rgba(0,0,0,.45)",display:"grid",placeItems:"center",zIndex:1000}}><div className="card" onClick={e=>e.stopPropagation()} style={{width:"min(720px,92vw)",maxHeight:"90vh",overflow:"auto",padding:20}}><div style={{display:"flex",justifyContent:"space-between",alignItems:"center",gap:12}}><h3 style={{margin:0,fontSize:20,fontWeight:800,color:"var(--accent)"}}>Solicitar cotización</h3><button className="chip" onClick={onClose} aria-label="Cerrar">Cerrar</button></div><div style={{marginTop:12}}>{children}</div></div></div>);}
 export default function Page(){
- const [media,setMedia]=useState([]); const [current,setCurrent]=useState(0); const [paused,setPaused]=useState(False);
+ const [media,setMedia]=useState([]); const [current,setCurrent]=useState(0); const [paused,setPaused]=useState(false);
  const tRef=useRef(null); const vRefs=useRef([]);
  const [empresa,setEmpresa]=useState(""); const [contacto,setContacto]=useState(""); const [servicio,setServicio]=useState(""); const [mensaje,setMensaje]=useState(""); const [email,setEmail]=useState(""); const [tel,setTel]=useState("");
  const [openModal,setOpenModal]=useState(false); const [sending,setSending]=useState(false); const [sent,setSent]=useState(false);
@@ -33,7 +33,7 @@ export default function Page(){
     <button onClick={()=>setOpenModal(true)} className="btn btn-brand">Solicitar cotización</button>
   </div></header>
   <section className="container" style={{marginBottom:16}}>
-    <div className="card" style={{overflow:"hidden",height:360,position:"relative"}} onMouseEnter={()=>setPaused(True)} onMouseLeave={()=>setPaused(False)} aria-roledescription="carousel" aria-label="Galería de servicios">
+    <div className="card" style={{overflow:"hidden",height:360,position:"relative"}} onMouseEnter={()=>setPaused(True)} onMouseLeave={()=>setPaused(false)} aria-roledescription="carousel" aria-label="Galería de servicios">
       {media.map((m,idx)=>(m.type==="video"?(
         <video key={m.src} src={m.src} muted playsInline autoPlay={idx===current} ref={el=>vRefs.current[idx]=el} onLoadedMetadata={()=>idx===current&&scheduleNext()} onEnded={()=>setCurrent(i=>(i+1)%media.length)} aria-hidden={idx===current?"false":"true"} style={{position:"absolute",inset:0,width:"100%",height:"100%",objectFit:"cover",opacity:idx===current?1:0,transition:"opacity 600ms ease"}}/>
       ):(
